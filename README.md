@@ -39,7 +39,7 @@ The primary project directories are outlined below:
 
 `pages/` contains file-based routes for your storefront.
 
-- `pages/api/` manages customer checkout using Stripe.
+- `pages/api/` manages customer checkout (payment integration removed).
 - `pages/orders/` displays the customer's receipt on successful checkout.
 - `pages/collections/` displays product collections with dynamic filtering.
 - `pages/*` displays all other base-level routes.
@@ -70,24 +70,7 @@ To use the mock API, update the [`tsconfig.json`](https://github.com/withastro/s
 }
 ```
 
-### Stripe
-
-[The Stripe API](https://docs.stripe.com/api) is used to accept payment and manage the checkout flow.
-
-#### Environment variables
-
-- `STRIPE_SECRET_KEY` - A Stripe API key [used to authenticate requests](https://docs.stripe.com/keys).
-
-### Loops
-
-[Loops.so](https://loops.so/) is an email sending service used to send a confirmation email to the customer after checking out successfully.
-
-#### Environment variables
-
-- `LOOPS_API_KEY` - A Loops API key [generated through their admin console](https://loops.so/docs/api-reference/intro).
-- `LOOPS_SHOP_TRANSACTIONAL_ID` - The ID of a [Loops transaction email](https://loops.so/docs/transactional/guide) to send to a customer when an order is placed. See `src/lib/emails.ts` for related email template data.
-- `LOOPS_FULFILLMENT_TRANSACTIONAL_ID` - The ID of a [Loops transaction email](https://loops.so/docs/transactional/guide) to send to _you_ (the seller) for order fulfillment. See `src/lib/emails.ts` for related email template data.
-- `LOOPS_FULFILLMENT_EMAIL` - The seller's email address to receive a receipt for fulfillment.
+<!-- Stripe payment integration and Loops email notifications removed -->
 
 ### Google Maps
 

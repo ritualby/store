@@ -30,12 +30,7 @@ export default defineConfig({
 	experimental: {
 		env: {
 			schema: {
-				STRIPE_SECRET_KEY: envField.string({
-					context: 'server',
-					access: 'secret',
-					// This is a random test key
-					default: 'sk_test_4eC39HqLyjWDarjtT1zdp7dc',
-				}),
+					// Stripe secret removed
 				FATHOM_SITE_ID: envField.string({
 					context: 'client',
 					access: 'public',
@@ -51,26 +46,7 @@ export default defineConfig({
 					access: 'public',
 					optional: true,
 				}),
-				LOOPS_API_KEY: envField.string({
-					context: 'server',
-					access: 'secret',
-					optional: true,
-				}),
-				LOOPS_SHOP_TRANSACTIONAL_ID: envField.string({
-					context: 'server',
-					access: 'public',
-					optional: true,
-				}),
-				LOOPS_FULFILLMENT_TRANSACTIONAL_ID: envField.string({
-					context: 'server',
-					access: 'public',
-					optional: true,
-				}),
-				LOOPS_FULFILLMENT_EMAIL: envField.string({
-					context: 'server',
-					access: 'public',
-					optional: true,
-				}),
+					// Loops email env vars removed
 				// Used by the Astro team for our internal backend
 				SHOP_API_URL: envField.string({
 					context: 'server',

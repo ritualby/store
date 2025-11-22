@@ -61,7 +61,7 @@ async function getGeoLocation(address: Exclude<Address, null>) {
 
 const geoLocation = order.shippingAddress && (await getGeoLocation(order.shippingAddress));
 if (!order.shippingAddress) {
-	console.error('Stripe unexpectedly did not provide a shipping address in the session details.');
+	console.error('Order data missing shipping address in the session details.');
 	// Display the information we can with a status code for error tracking.
 	Astro.response.status = 500;
 } else {

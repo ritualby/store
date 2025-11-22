@@ -1,7 +1,7 @@
 import { type Product } from 'storefront:client';
 import { z } from 'zod';
 
-export const stripeProductMetadataSchema = z
+export const productMetadataSchema = z
 	.object({
 		productVariantId: z.string(),
 		productName: z.string(),
